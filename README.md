@@ -1,24 +1,25 @@
 ![image](https://github.com/user-attachments/assets/825f97d3-91e6-4be2-8faa-86842daaa297)
-<h1>Configuring a virtual machine and remote desktop (Azure)</h1>
-This tutorial outlines the implementation of Azure Virtual Machines and remote desktop.<br />
+<h1>Creating and Configuring a virtual machine and then using Remote Desktop (Azure)</h1>
+This tutorial showcases the implementation of Azure Virtual Machines and how to connect to them using remote desktop.<br />
 
 
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
+- Microsoft Azure
 - Remote Desktop
+- Windows App (for macOS)
 
 
 <h2>Operating Systems Used </h2>
 
-- Windows Server 2022
-- Windows 10 
+- macOS Sequoia
+- Windows 10 (21H2)
 
 
 
 <h2>Deployment and Configuration Steps</h2>
-<h2>CREATING VIRTUAL MACHINE</h2>
+<h2>Creating our Virtual Machine</h2>
 
 
 1. Visit Azure
@@ -28,118 +29,92 @@ This tutorial outlines the implementation of Azure Virtual Machines and remote d
 - Sign up for a free 30-day subscription.
 - Create a username and password for your tenant.
 - Access the portal anytime at portal.azure.com using your credentials.
-![image](https://github.com/user-attachments/assets/cb1c6cb2-9142-47a5-92f1-f3a24c26ed3d)
+<img width="1253" height="624" alt="screenshot 1" src="https://github.com/user-attachments/assets/0c9b8e35-d215-4444-bc39-cd60969300b4" />
 
 
 
 
 
 3. Create a Resource Group
-- In the search bar, type "Resource Groups" and click on "Create Resource Group".
-![image](https://github.com/user-attachments/assets/3f413928-9fa7-4661-8fb4-c65553521eca)
+- Click on "Resource Group" and then click "Create".
+<img width="1253" height="624" alt="screen 2" src="https://github.com/user-attachments/assets/a64765a9-0e97-43e0-bdee-13f0b1ce66d9" />
+<img width="1253" height="624" alt="screen 3" src="https://github.com/user-attachments/assets/c0451b53-ec66-402c-96c8-7e33afb91e5a" />
 
-- Enter a name for your resource group.
+
+- Enter a desired name for your resource group.
 - Under "Resource Details," choose your desired region.
 - Click "Review + Create." After validation, click "Create" to set up the resource group.
-![image](https://github.com/user-attachments/assets/44c9f750-83e1-48e6-8442-4422aad740c0)
+<img width="671" height="297" alt="Screenshot 2025-08-15 at 11 23 55 PM" src="https://github.com/user-attachments/assets/32e0fc37-d690-4232-8db3-4213a2c11c1d" />
+
 
 
 
 
 4. Create a Virtual Machine
-- In the search bar, type "Virtual Machines."
-![image](https://github.com/user-attachments/assets/219fc684-bb34-4651-8961-9461fa09ebe2)
+- In the Home page, click "Virtual Machines."
+<img width="1296" height="647" alt="Screenshot 2025-08-15 at 11 25 50 PM" src="https://github.com/user-attachments/assets/4d7e73da-1d2f-4478-b634-ebf5295228e2" />
 
-- Click "Create," then select "Azure Virtual Machine."
-![image](https://github.com/user-attachments/assets/6cbd1ff1-6262-4679-bced-63fb8c970814)
 
-- In the creation form:
-- Select your Azure Subscription and the Resource Group you just created.
-- Name your Virtual Machine.
+- Click "Create," then select "Virtual Machine."
+<img width="1296" height="647" alt="Screenshot 2025-08-15 at 11 27 09 PM" src="https://github.com/user-attachments/assets/72df7374-c754-4d46-a0e3-061bd8819566" />
+
+
+- Select your Azure Subscription and the Resource Group you recently created.
+- Name your Virtual Machine as you see fit.
 - Choose the same region as your resource group.
-![image](https://github.com/user-attachments/assets/c1bbfc54-ca45-499f-b7ef-07c3a51ef923)
-
-- Select your desired Operating System under "Image."(windows 10 pro)
-- Pick the desired Size for your virtual CPU.(Standard D2s_v3 - 2 vcpus, 8 GiB memory)
-![image](https://github.com/user-attachments/assets/5e2df3f8-aa05-4a8c-a2f5-f9b237ead954)
+<img width="1296" height="647" alt="Screenshot 2025-08-15 at 11 42 36 PM" src="https://github.com/user-attachments/assets/da50bf99-18e2-4363-b5ef-10a8a9d7a534" />
 
 
+- Select your desired Operating System under "Image." (windows 10 Pro N, Version 22h2 x64 Gen 2)
+- Pick the desired Size for your virtual CPU.(Standard D2s_v6 - 2 vcpus, 8 GiB memory)
 - Create a username and password for the Administrator account.
 - Check the licensing box.
 Click "Review + Create." After validation, click "Create." This may take a few minutes.
-![image](https://github.com/user-attachments/assets/ab17b907-aada-4d4a-a698-1c53ad765778)
+<img width="1296" height="647" alt="Screenshot 2025-08-15 at 11 42 36 PM" src="https://github.com/user-attachments/assets/54fc8aee-5288-4951-bc0b-c3ab434f52ab" />
+<img width="1296" height="647" alt="Screenshot 2025-08-15 at 11 45 01 PM" src="https://github.com/user-attachments/assets/451cbc2e-a628-4295-86af-99b59a627769" />
+<img width="1296" height="647" alt="Screenshot 2025-08-15 at 11 46 27 PM" src="https://github.com/user-attachments/assets/6c2b697a-b8b2-4178-8d61-a6aaaa936499" />
+<img width="1296" height="647" alt="Screenshot 2025-08-15 at 11 47 27 PM" src="https://github.com/user-attachments/assets/a2d6321b-846a-4ca2-9775-37a4b1f1f57c" />
 
 
-Congratulations on creating your Virtual Machine!
+
+
+- Once deployment is finished, congratulations on creating your Virtual Machine!
+<img width="1296" height="647" alt="Screenshot 2025-08-15 at 11 49 59 PM" src="https://github.com/user-attachments/assets/5855700f-a2e2-4f7f-9b6c-0faef7ebfc14" />
 
  
  <h2>Remote access</h2>
 
 
 1. Access Your Virtual Machine
-- In the search bar, type "Virtual Machines" or find it under the "Azure Services" tab.
-- Click on the name of the VM you created to access the overview page.
-[
-](https://private-user-images.githubusercontent.com/183324257/372301928-219fc684-bb34-4651-8961-9461fa09ebe2.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjc3NTI3OTIsIm5iZiI6MTcyNzc1MjQ5MiwicGF0aCI6Ii8xODMzMjQyNTcvMzcyMzAxOTI4LTIxOWZjNjg0LWJiMzQtNDY1MS04OTYxLTk0NjFmYTA5ZWJlMi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMDAxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTAwMVQwMzE0NTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00ZGViN2RlYTY3YThlOTBkODk0MzhlNDVmMzc5YzQ2ZmU3Mjk2YmUwY2E0NjI4MjAzNTBmZDk3MDI0N2Y5ZmM3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.UcvE2Wl1F2NfWeh9HIk9aCIC06HurUuxjZpz8-o1uiE)![image](https://github.com/user-attachments/assets/777c74f3-9d7f-4baa-b923-110d9519d51d)
-
-- Note the Public IP Address displayed.
-![image](https://github.com/user-attachments/assets/4f01d49b-e174-47f2-a966-7d9ce2a5e70e)
+- After deployment is completed, click "Go to resource"
+- Notice the Public IP Address displayed.
+<img width="1293" height="648" alt="Screenshot 2025-08-15 at 11 56 00 PM" src="https://github.com/user-attachments/assets/32ba03d5-05ee-44df-84e7-386ba8812c0e" />
 
 
 
 
 
-2. For Windows Users
-- Open the Start menu and type "Remote Desktop."
-- Paste or type the public IP address into the Remote Desktop Connection window.
-![image](https://github.com/user-attachments/assets/591a6a83-79f6-411e-8ce2-3dc34ac4d329)
-
-- Enter the username and password you created for the VM.
-- If you receive a warning about security, click Yes to proceed.
-- Your Virtual Machine should load; enter your username and password when prompted.
-
-
-![image](https://github.com/user-attachments/assets/e3bc2421-98df-4395-836d-8582788db287)
-
-- Connecting to Your VM
-
-
-![image](https://github.com/user-attachments/assets/4860d276-db2c-4de3-a870-1e1ea34048b4)
-
-
-
-3. For Mac Users
-- Download "windows app" from the App Store (it's free).
-![image](https://github.com/user-attachments/assets/5225a579-c0df-471d-a912-30c2bce1459b)
-
-
-- Open the app and click the + sign to Add PC.
-![image](https://github.com/user-attachments/assets/a950947a-cc2d-404c-bb54-a1df316fdf06)
-
-
+2. Since we're using a Mac:
+- Use "Windows app" to remotely access the VM we just created.
+- On the top left corner, click "+" and then "Add PC"
 - Enter the public IP address under "PC Name."
-![image](https://github.com/user-attachments/assets/b9c7114d-9459-4ba6-abe1-da0ec58dc4ae)
+- Enter the name for your VM under "Friendly name."
+<img width="1293" height="751" alt="Screenshot 2025-08-16 at 12 01 40 AM" src="https://github.com/user-attachments/assets/982d65e3-45ff-44de-b224-3fbe1c857566" />
 
 
 
-- Under "Saved PC," enter the VM's username and password.
+- Under "Saved PC," click on the VM you just added and enter the VM's username and password.
 - Click continue.
-![image](https://github.com/user-attachments/assets/2a52a822-9186-450c-adb5-cb7fe9ae0578)
+<img width="505" height="246" alt="Screenshot 2025-08-16 at 12 05 41 AM" src="https://github.com/user-attachments/assets/9c4eded5-4a81-49a3-a7f5-8bf678264c99" />
+
 
 4. Connecting to Your VM
-![image](https://github.com/user-attachments/assets/6773ccfd-31b0-40eb-bd90-161b7e6e8820)
+<img width="1294" height="837" alt="Screenshot 2025-08-16 at 12 07 02 AM" src="https://github.com/user-attachments/assets/4e792944-3493-4f47-9c68-daa852ff5f32" />
+<img width="1294" height="837" alt="Screenshot 2025-08-16 at 12 07 34 AM" src="https://github.com/user-attachments/assets/3c4bbe41-6c97-4aa3-b0bf-1f903041268b" />
 
 
-<h2>Deleting Your Virtual Machine</h2>
-
-1. To delete your VM and associated resources:
-- Go back to the Azure portal.
-![image](https://github.com/user-attachments/assets/c72b1037-3cbe-4e31-822a-fe81319e2124)
-
-- Navigate to your Resource Group.
-- Delete the resource group and any related folders (e.g., NetworkWatcherRG).
-(RG-network-activitie)
-![image](https://github.com/user-attachments/assets/ff63b762-f0b5-46d9-955e-1d537c2d9119)
+<h2>Conclusion</h2>
+This concludes our tutorial showcasing how to create a Virtual Machine in Azure and how to properly connect to it using Remote Desktop (Windows App for macOS users)
 
 
-And that's it! You've successfully created, accessed, and deleted a Virtual Machine on Azure.
+
